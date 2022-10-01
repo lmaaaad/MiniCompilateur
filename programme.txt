@@ -1,0 +1,32 @@
+IDENTIFICATION DIVISION.
+PROGRAM-ID. Acad.
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+
+    A | B INTEGER.
+    Z INTEGER.
+    C FLOAT.
+    Char CHAR.
+   G STRING.
+# this is my second comment  !
+PROCEDURE DIVISION.
+    A = 5.
+    B = A + (5 + 3) * 3.
+
+      IF (A .GE. B):
+        DISPLAY ("la valeur de B est $ et #": B,G).
+	MOVE 2 TO 100
+        END.
+     END.
+	
+    IF ((5 .GE. B) OR (A .GE. B) AND (1 .GE. 2 )):
+        Z = A + B.
+    ELSE:
+        ACCEPT("$":@ A).
+        MOVE B TO A
+        END.
+    END.
+IF (NOT (5 .GE. B)):
+ Z = A + B.
+END.
+STOP RUN.
